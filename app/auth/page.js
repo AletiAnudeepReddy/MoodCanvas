@@ -6,10 +6,10 @@ export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true)
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="bg-white shadow-xl rounded-2xl w-full max-w-md overflow-hidden transition-all duration-500">
+      <div className="bg-white shadow-xl rounded-xl w-full max-w-md overflow-hidden transition-all duration-500">
         {/* Header */}
         <div className="text-center py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-          <h2 className="text-2xl font-bold">{isLogin ? 'Login to MoodCanvas' : 'Create Your MoodCanvas Account'}</h2>
+          <h2 className="text-xl font-bold">{isLogin ? 'Login to MoodCanvas' : 'Create Your MoodCanvas Account'}</h2>
         </div>
         {/* Form Container */}
         <div className="p-6">

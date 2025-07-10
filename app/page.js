@@ -57,7 +57,7 @@ export default function Home() {
             <div className="flex gap-4 items-center">
 
               {/* Try Now Button */}
-              <Link href="/generate">
+              <Link href="/auth">
                 <button className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg px-6 py-2 text-lg font-semibold shadow-md transition duration-200">
                   <PlayCircleIcon className="w-5 h-5" />
                   Try Now

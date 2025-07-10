@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <div className='container mx-auto flex flex-row justify-between items-center h-30 p-10 px-20 border-b-2 border-purple-50'>
+        <div className='container mx-auto flex flex-row justify-between items-center h-30 p-10 pb-5 px-20 border-b-2 border-purple-50'>
             <div className="logo flex items-center gap-3 p-2 rounded-xl bg-white/70 backdrop-blur-md transition duration-300 hover:scale-[1.02]">
                 {/* Icon with subtle background glow */}
                 <div className="p-2 bg-purple-100 rounded-full shadow-inner">
@@ -27,12 +27,10 @@ const Navbar = () => {
 
             <div>
                 <div className="flex p-2 items-center gap-4">
-                    <HomeIcon className="hover:bg-purple-200 hover:rounded-full hover:p-1 w-8 h-8 text-purple-700" />
-
-
-                    <PlayCircleIcon className="hover:bg-pink-200 hover:rounded-full hover:p-1 w-8 h-8 text-pink-700" />
-                    <FaGithub className="hover:bg-gray-200 hover:rounded-full hover:p-1 w-8 h-8 text-gray-700" />
-                    <ArrowRightOnRectangleIcon className="hover:bg-green-200 hover:rounded-full hover:p-1 w-8 h-8 text-green-700" />
+                    <Link href={"/"}><HomeIcon className="hover:bg-purple-200 hover:rounded-full hover:p-1 w-8 h-8 text-purple-700" /></Link>
+                    <Link href={"/auth"}><PlayCircleIcon className="hover:bg-pink-200 hover:rounded-full hover:p-1 w-8 h-8 text-pink-700" /></Link>
+                    <Link href="https://github.com/AletiAnudeepReddy" target="_blank"><FaGithub className="hover:bg-gray-200 hover:rounded-full hover:p-1 w-8 h-8 text-gray-700" /></Link>
+                    <Link href={"/auth"}><ArrowRightOnRectangleIcon className="hover:bg-green-200 hover:rounded-full hover:p-1 w-8 h-8 text-green-700" /></Link>
                 </div>
             </div>
         </div>

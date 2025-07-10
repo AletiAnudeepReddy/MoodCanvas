@@ -44,10 +44,10 @@ export default function Home() {
           </div>
           <div className="mx-[10vw] row2 p-10">
             <h2 className="text-center text-5xl font-medium text-gray-900 sm:text-7xl">Where feelings become
-              <span class="animate-text-gradient inline-flex bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 
+              <span className="animate-text-gradient inline-flex bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 
             bg-[200%_auto] bg-clip-text leading-tight text-transparent ">visual stories</span>
             </h2>
-            <p class="mx-[10vw] mt-6 text-center text-xl leading-6 text-gray-600">
+            <p className="mx-[10vw] mt-6 text-center text-xl leading-6 text-gray-600">
               MoodCanvas transforms your daily emotions into stunning visual experiences. Simply share how you feel,
               and let AI craft a unique wallpaper that blends quotes and imagery.
             </p>
@@ -57,7 +57,7 @@ export default function Home() {
             <div className="flex gap-4 items-center">
 
               {/* Try Now Button */}
-              <Link href="/shorten">
+              <Link href="/generate">
                 <button className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg px-6 py-2 text-lg font-semibold shadow-md transition duration-200">
                   <PlayCircleIcon className="w-5 h-5" />
                   Try Now

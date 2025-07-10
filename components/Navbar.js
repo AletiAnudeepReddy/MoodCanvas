@@ -11,20 +11,28 @@ import Link from 'next/link'
 const Navbar = () => {
     return (
         <div className='container mx-auto flex flex-row justify-between items-center h-30 p-10 px-20'>
-            <div className='logo flex flex-row items-center gap-3'>
-                <MdWallpaper size={46}  className='text-purple-600 fill-purple-600'/>
-                <Link href={"/"}><h1 className="text-4xl font-serif tracking-wide font-bold bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 text-transparent bg-clip-text">
-                    MoodCanvas
-                </h1></Link>
+            <div className="logo flex items-center gap-3 p-2 rounded-xl bg-white/70 backdrop-blur-md transition duration-300 hover:scale-[1.02]">
+                {/* Icon with subtle background glow */}
+                <div className="p-2 bg-purple-100 rounded-full shadow-inner">
+                    <MdWallpaper size={40} className="text-purple-600" />
+                </div>
+
+                {/* Brand Name with gradient, refined font, and spacing */}
+                <Link href="/" className="hover:opacity-90 transition">
+                    <h1 className="text-4xl font-bold font-serif tracking-wide bg-gradient-to-r from-indigo-600 via-pink-500 to-purple-600 text-transparent bg-clip-text">
+                        MoodCanvas
+                    </h1>
+                </Link>
             </div>
+
             <div>
                 <div className="flex p-2 items-center gap-4">
-                    <HomeIcon className="hover:w-9 hover:h-9 w-8 h-8 text-purple-700" />
-                    
-                    
-                    <PlayCircleIcon className="hover:w-9 hover:h-9 w-8 h-8 text-pink-700" />
-                    <FaGithub className="hover:w-9 hover:h-9 w-8 h-8 text-gray-700" />
-                    <ArrowRightOnRectangleIcon className="hover:w-9 hover:h-9 w-8 h-8 text-green-700" />
+                    <HomeIcon className="hover:bg-purple-200 hover:rounded-full hover:p-1 w-8 h-8 text-purple-700" />
+
+
+                    <PlayCircleIcon className="hover:bg-pink-200 hover:rounded-full hover:p-1 w-8 h-8 text-pink-700" />
+                    <FaGithub className="hover:bg-gray-200 hover:rounded-full hover:p-1 w-8 h-8 text-gray-700" />
+                    <ArrowRightOnRectangleIcon className="hover:bg-green-200 hover:rounded-full hover:p-1 w-8 h-8 text-green-700" />
                 </div>
             </div>
         </div>

@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <>
       <div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
-        <div className="container mx-auto flex flex-col items-center justify-center mt-[10vw]">
+        <div className="container mx-auto flex flex-col items-center justify-center mt-[25vh]">
           <div className="row1 h-8">
             <div className="relative p-0 inline-block group">
               {/* Rotating border layer */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 animate-spin-slow opacity-35 blur-md"></div>
 
-              {/* Main button */}
+              <Link href={"/about"}>
               <div className="relative border border-purple-500 hover:border-2 hover:border-purple-400 inline-flex cursor-pointer justify-center rounded-full bg-white px-5 py-[6px] text-md font-medium
               text-slate-600 backdrop-blur-xl transition duration-300">
                 New Moods ⚡️
@@ -38,6 +38,7 @@ export default function Home() {
                   </svg>
                 </span>
               </div>
+              </Link>
             </div>
 
           </div>

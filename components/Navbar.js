@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className='container mx-auto flex flex-row justify-between items-center h-30 p-10 px-20'>
             <div className='logo flex flex-row items-center gap-3'>
                 <MdWallpaper size={46}  className='text-purple-600 fill-purple-600'/>
-                <Link href={"/"}><h1 className="text-4xl font-serif tracking-wide font-bold bg-gradient-to-r from-indigo-500 via-pink-600 to-purple-500 text-transparent bg-clip-text">
+                <Link href={"/"}><h1 className="text-4xl font-serif tracking-wide font-bold bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 text-transparent bg-clip-text">
                     MoodCanvas
                 </h1></Link>
             </div>

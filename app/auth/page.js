@@ -5,7 +5,7 @@ import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa'
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true)
   return (
-    <div className="min-h-[85vh] flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <div className="bg-white shadow-xl rounded-2xl w-full max-w-md overflow-hidden transition-all duration-500">
         {/* Header */}
         <div className="text-center py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white">

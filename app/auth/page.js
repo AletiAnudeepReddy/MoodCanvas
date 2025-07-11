@@ -2,8 +2,11 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa'
+import { useRouter } from 'next/navigation'
+
 
 export default function AuthPage() {
+  const router = useRouter();
   const [isLogin, setIsLogin] = useState(true)
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
@@ -11,35 +14,45 @@ export default function AuthPage() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+const handleSubmit = async (e) => {
+  e.preventDefault()
 
-    if (!email || !password || (!isLogin && (!fullname || password !== confirmPassword))) {
-      setMessage('Please fill all fields correctly.')
-      return
-    }
-
-    const endpoint = isLogin ? '/api/login' : '/api/signup'
-    const payload = isLogin
-      ? { email, password }
-      : { fullname, email, password }
-
-    try {
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.message || 'Something went wrong')
-
-      setMessage(data.message || `${isLogin ? 'Logged in' : 'Signed up'} successfully!`)
-      // Optionally redirect or store token/session
-    } catch (err) {
-      setMessage(err.message)
-    }
+  if (!email || !password || (!isLogin && (!fullname || password !== confirmPassword))) {
+    setMessage('Please fill all fields correctly.')
+    return
   }
+
+  const endpoint = isLogin ? '/api/login' : '/api/signup'
+  const payload = isLogin
+    ? { email, password }
+    : { fullname, email, password }
+
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+
+    const data = await res.json()
+    if (!res.ok) throw new Error(data.message || 'Something went wrong')
+
+    setMessage(data.message || `${isLogin ? 'Logged in' : 'Signed up'} successfully!`)
+
+    if (isLogin) {
+      router.push('/generate')
+    } else {
+      setIsLogin(true)
+      setFullname('')
+      setEmail('')
+      setPassword('')
+      setConfirmPassword('')
+    }
+  } catch (err) {
+    setMessage(err.message)
+  }
+}
+
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">

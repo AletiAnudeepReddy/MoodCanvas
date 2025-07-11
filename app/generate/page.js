@@ -10,11 +10,25 @@ export default function MoodCanvasMain() {
     const [imageURL, setImageURL] = useState('/flower.jpg') // use placeholder first
 
     const handleGenerate = async () => {
-        // Later: call your OpenAI/Stable Diffusion APIs here
-        // For now, mock image + quote
-        setQuote("Even the darkest night will end, and the sun will rise.")
-        setImageURL('/flower.jpg') // Replace with real image later
-    }
+  if (!moodInput.trim()) return
+
+  try {
+    const res = await fetch('/api/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ mood: moodInput }),
+    })
+
+    const data = await res.json()
+    setQuote(data.quote)
+    setImageURL(data.imageUrl)
+  } catch (err) {
+    console.error('Error generating content:', err)
+  }
+}
+
 
     return (
         <main className="min-h-[88vh] px-6 py-12">

@@ -3,6 +3,9 @@ import { usePathname } from 'next/navigation'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +21,14 @@ const geistMono = Geist_Mono({
 
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      easing: 'ease-in-out',
+      once: true,
+    })
+  }, [])
+
   const pathname = usePathname()
 
   // Static routes that should NOT show navbar

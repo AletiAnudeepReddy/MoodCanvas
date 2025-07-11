@@ -11,7 +11,8 @@ export default function AboutPage() {
     <div className="max-w-7xl mx-auto px-6 py-7">
       
       <section className="text-center mb-10">
-        <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 text-transparent bg-clip-text mb-4">
+        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-pink-600 to-purple-600 
+            bg-[200%_auto] bg-clip-text leading-tight text-transparent">
           <span className='text-black'>About</span> MoodCanvas
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -21,7 +22,7 @@ export default function AboutPage() {
 
       <section className="grid md:grid-cols-2 gap-10 items-center mb-15">
         <Image
-          src="/gb.jpg" // Replace with your image in public/
+          src="/flower.jpg" // Replace with your image in public/
           alt="Mood-based wallpaper"
           width={550}
           height={350}

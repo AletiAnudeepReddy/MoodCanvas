@@ -6,7 +6,9 @@ export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true)
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="bg-white shadow-xl rounded-xl w-full max-w-md overflow-hidden transition-all duration-500">
+      <div className="bg-white shadow-xl rounded-xl w-full max-w-md overflow-hidden transition-all duration-500"
+      data-aos="flip-left"
+                data-aos-delay="200">
         {/* Header */}
         <div className="text-center py-5 bg-purple-500  text-white">
           <h2 className="text-2xl font-bold">{isLogin ? 'Login to MoodCanvas' : 'Create Your MoodCanvas Account'}</h2>
@@ -27,7 +29,9 @@ export default function AuthPage() {
             )}
 
             {/* Email */}
-            <div className="relative">
+            <div className="relative"
+            data-aos="fade-right"
+                data-aos-delay="300">
               <FaEnvelope className="absolute left-3 top-3.5 text-gray-400" />
               <input
                 type="email"
@@ -37,7 +41,9 @@ export default function AuthPage() {
             </div>
 
             {/* Password */}
-            <div className="relative">
+            <div className="relative"
+            data-aos="fade-left"
+                data-aos-delay="400">
               <FaLock className="absolute left-3 top-3.5 text-gray-400" />
               <input
                 type="password"
@@ -59,13 +65,16 @@ export default function AuthPage() {
             )}
 
             {/* Submit Button */}
-            <button className="w-full bg-purple-500 text-white py-2 rounded-lg font-semibold hover:bg-purple-600 transition">
+            <button data-aos="zoom-in"
+                data-aos-delay="500" className="w-full bg-purple-500 text-white py-2 rounded-lg font-semibold hover:bg-purple-600 transition">
               {isLogin ? 'Login' : 'Sign Up'}
             </button>
           </form>
 
           {/* Toggle Link */}
-          <p className="mt-4 text-center text-sm text-gray-600">
+          <p className="mt-4 text-center text-sm text-gray-600"
+          data-aos="fade-up"
+                data-aos-delay="600">
             {isLogin ? (
               <>
                 Don’t have an account?{' '}

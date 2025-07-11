@@ -10,10 +10,14 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <div className='container mx-auto flex flex-row justify-between items-center h-30 p-10 pb-5 px-20 border-b-2 border-purple-50'>
-            <div className="logo flex items-center gap-3 p-2 rounded-xl bg-white/70 backdrop-blur-md transition duration-300 hover:scale-[1.02]">
+        <div className='container mx-auto flex flex-row justify-between items-center h-24 pb-5 pt-6 px-20 border-b-2 border-purple-50'
+         data-aos="fade-down"
+         >
+            <div className="logo flex items-center gap-2 p-2 rounded-xl bg-white/70 backdrop-blur-md transition duration-300 hover:scale-[1.02]"
+            data-aos="zoom-in"
+            data-aos-delay="300">
                 {/* Icon with subtle background glow */}
-                <div className="p-2 bg-purple-100 rounded-full shadow-inner">
+                <div className="p-2 rounded-full">
                     <MdWallpaper size={40} className="text-purple-700" />
                 </div>
 
@@ -26,11 +30,16 @@ const Navbar = () => {
             </div>
 
             <div>
-                <div className="flex p-2 items-center gap-4">
-                    <Link href={"/"}><HomeIcon className="hover:bg-purple-200 hover:rounded-full hover:p-1 w-8 h-8 text-purple-700" /></Link>
-                    <Link href={"/auth"}><PlayCircleIcon className="hover:bg-pink-200 hover:rounded-full hover:p-1 w-8 h-8 text-pink-700" /></Link>
-                    <Link href="https://github.com/AletiAnudeepReddy" target="_blank"><FaGithub className="hover:bg-gray-200 hover:rounded-full hover:p-1 w-8 h-8 text-gray-700" /></Link>
-                    <Link href={"/auth"}><ArrowRightOnRectangleIcon className="hover:bg-green-200 hover:rounded-full hover:p-1 w-8 h-8 text-green-700" /></Link>
+                <div className="flex p-2 items-center gap-4"
+                 >
+                    <Link data-aos="fade-left"
+                data-aos-delay="200" href={"/"}><HomeIcon className="hover:bg-purple-200 hover:rounded-full hover:p-1 w-8 h-8 text-purple-700" /></Link>
+                    <Link data-aos="fade-left"
+                data-aos-delay="300" href={"/auth"}><PlayCircleIcon className="hover:bg-pink-200 hover:rounded-full hover:p-1 w-8 h-8 text-pink-700" /></Link>
+                    <Link data-aos="fade-left"
+                data-aos-delay="400" href="https://github.com/AletiAnudeepReddy" target="_blank"><FaGithub className="hover:bg-gray-200 hover:rounded-full hover:p-1 w-8 h-8 text-gray-700" /></Link>
+                    <Link data-aos="fade-left"
+                data-aos-delay="500" href={"/auth"}><ArrowRightOnRectangleIcon className="hover:bg-green-200 hover:rounded-full hover:p-1 w-8 h-8 text-green-700" /></Link>
                 </div>
             </div>
         </div>

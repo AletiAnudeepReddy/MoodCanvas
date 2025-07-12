@@ -40,6 +40,7 @@ const handleSubmit = async (e) => {
     setMessage(data.message || `${isLogin ? 'Logged in' : 'Signed up'} successfully!`)
 
     if (isLogin) {
+      localStorage.setItem("userEmail", email);
       router.push('/generate')
     } else {
       setIsLogin(true)
